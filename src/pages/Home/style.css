@@ -29,11 +29,16 @@
   width: 50%;
   padding: 24px;
 
-  background-color: #E6E6E6;
+  background-color: #222222;
+  ;
   border-radius: 5px;
   border: none;
 
   font-size: 16px;
+}
+
+.container input:focus {
+  outline: none;
 }
 
 .container button {
@@ -41,7 +46,7 @@
   padding: 24px;
   font-weight: 700;
 
-  background-color: #EA4C89;
+  background-color: #C82C31;
   color: #FFFF;
 
   border-radius: 5px;

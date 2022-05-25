@@ -18,6 +18,9 @@ export function Home() {
     }
 
     setStudents(prevState => [...prevState, newStudent])
+
+    const input = document.querySelector("#input")
+    input.value = ""
   }
 
   useEffect(() => {
@@ -42,11 +45,13 @@ export function Home() {
       </header>
       <input
         type="text"
+        id="input"
         placeholder="Digite o nome..."
         onChange={event => setStudentName(event.target.value)}
       />
       <button
         type="button"
+        id="btn"
         onClick={handleAddStudent}>
         Adicionar
       </button>
@@ -59,6 +64,23 @@ export function Home() {
             time={student.time}
           />
         ))
+      }
+
+      {
+        document.addEventListener("keypress", function (e) {
+          if (e.defaultPrevented) {
+            return;
+          }
+          switch (e.key) {
+            case "Enter":
+              var btn = document.querySelector("#btn")
+              btn.click()
+              break;
+            default:
+              return
+          }
+          e.preventDefault();
+        }, true)
       }
     </div>
   )

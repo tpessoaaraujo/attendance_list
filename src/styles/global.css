@@ -5,6 +5,15 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #121212;
+  color: #ffff;
+}
+
+body input {
+  color: #ffff;
+}
+
 body,
 input,
 button {
